@@ -1,0 +1,7 @@
+{
+    "options":{
+        "1" : "Load file",
+        "2" : "Calculator",
+        "0": "Exit"
+    }
+}

@@ -1,2 +1,8 @@
+import pandas as pd
+
+def run():
+    df = pd.read_csv("data/students.csv")
+    print(df)
+
 if __name__ == "__main__":
-    pass
+    run()

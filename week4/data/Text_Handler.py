@@ -33,13 +33,13 @@ class Text_Handler:
         return file_data
 
     def write_to_file(self, filename:str) -> None:
-        pass
+        raise("Not implemented!")
 
     def append_to_file(self, filename:str) -> None:
-        pass
+        raise("Not implemented!")
 
     def create_file(self, filename:str) -> None:
-        pass
+        raise("Not implemented!")
 
     def main():
         print("\n")

@@ -82,3 +82,25 @@ fig.tight_layout()
 # plt.show()
 fig.savefig(OUTPUTS_DIR / "coffe_combined.png")
 plt.close(fig)
+
+# numerical data instead of categorical data as above
+df_study_hours = pd.read_csv(DATA_DIR / "study_hours.csv")
+
+x_values = df["hours_studied"]
+y_values = df["test_score"]
+
+fig, ax = plt.subplots(figsize=(7,4))
+
+#setup the plot, values and labels
+ax.scatter(x_values, y_values, marker="o")
+ax.set_title("Hours studied")
+ax.set_xlabel("Hours")
+ax.set_ylabel("Result")
+
+# create the fig ( picture )
+fig.tight_layout()
+
+# remember fig and ax are references to objects in plt, created on row 30
+# plt.show()
+fig.savefig(OUTPUTS_DIR / "study_hours_numeral.png")
+plt.close(fig)

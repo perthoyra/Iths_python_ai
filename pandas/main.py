@@ -19,7 +19,7 @@ def run():
     # test to see if we can get the invalid/missing value
     for col_value in missing_values:
         if col_value != 0:
-                print(col_value)
+                print(f"Missing value found: {col_value}")
 
     # replace value in the in menory Copy of the data
     # NOTE: fillna() casts int as floats

@@ -4,10 +4,6 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 
-def run():
-    # simple_exampel()
-    more_complex()
-
 def more_complex():
     df = pd.read_csv(f"{DATA_DIR}/test_results.csv")
 
@@ -64,6 +60,10 @@ def simple_exampel():
 
     # Save the cleaned and transformed data for future use
     df.to_csv(f"{DATA_DIR}/clean_data.csv", index=False)        
+
+def run():
+    # simple_exampel()
+    more_complex()
 
 if __name__ == "__main__":
     run()

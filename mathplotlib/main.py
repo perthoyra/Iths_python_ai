@@ -38,7 +38,49 @@ ax.set_ylabel("Number of cups")
 fig.tight_layout()
 
 # remember fig and ax are references to objects in plt, created on row 30
-plt.show()
+# plt.show()
+fig.savefig(OUTPUTS_DIR / "coffe_figure.png")
 plt.close(fig)
 
 # %%
+
+fig, ax = plt.subplots(figsize=(7,4))
+
+#setup the plot, values and labels
+ax.bar(x_values, y_values, color="#4C78A8")
+ax.set_title("Cups sold per day")
+ax.set_xlabel("Day")
+ax.set_ylabel("Number of cups")
+
+# create the fig ( picture )
+fig.tight_layout()
+
+# remember fig and ax are references to objects in plt, created on row 30
+# plt.show()
+fig.savefig(OUTPUTS_DIR / "coffe_bars.png")
+plt.close(fig)
+
+# %%
+
+
+
+fig, axes = plt.subplots(1, 2, figsize=(10,4))
+
+axes[0].plot(x_values, y_values, marker="o")
+axes[0].set_title("Cups sold per day")
+axes[0].set_xlabel("Day")
+axes[0].set_ylabel("Number of cups")
+
+#setup the plot, values and labels
+axes[1].bar(x_values, y_values, color="#4C78A8")
+axes[1].set_title("Cups sold per day")
+axes[1].set_xlabel("Day")
+axes[1].set_ylabel("Number of cups")
+
+# create the fig ( picture )
+fig.tight_layout()
+
+# remember fig and ax are references to objects in plt, created on row 30
+# plt.show()
+fig.savefig(OUTPUTS_DIR / "coffe_combined.png")
+plt.close(fig)

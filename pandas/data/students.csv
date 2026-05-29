@@ -1,5 +1,6 @@
-id,name,grade
-0, Peter, B
-1, Mike, D
-2, Helen, B
-3, Anna, C
+Name,Score,City
+Peter, 2, Stockholm
+Mike, 4, Gothenburg
+Helen, 2, Malmo
+Anna, 3, Kiruna
+John, 5,Falun

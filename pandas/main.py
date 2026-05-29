@@ -1,3 +1,6 @@
+# %%
+# above is an example of how to enable running isolated parts in an interactive window
+
 from pathlib import Path
 import pandas as pd
 
@@ -70,3 +73,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+# %%

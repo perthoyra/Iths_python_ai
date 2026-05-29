@@ -86,8 +86,10 @@ plt.close(fig)
 # numerical data instead of categorical data as above
 df_study_hours = pd.read_csv(DATA_DIR / "study_hours.csv")
 
-x_values = df["hours_studied"]
-y_values = df["test_score"]
+print(df_study_hours.head())
+
+x_values = df_study_hours["hours_studied"]
+y_values = df_study_hours["test_score"]
 
 fig, ax = plt.subplots(figsize=(7,4))
 

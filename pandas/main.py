@@ -5,6 +5,39 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 
 def run():
+    # simple_exampel()
+    more_complex()
+
+def more_complex():
+    df = pd.read_csv(f"{DATA_DIR}/test_results.csv")
+
+    # Inspect your data, should show 2 columns with missing values in this case
+    print(f"\nColumns:\n{list(df.columns)}")
+    print(f"\nMissing before:\n{df.isna().sum()}")
+
+    # Clean your data
+    df["Test1"] = df["Test1"].fillna(0).astype(int)
+    df["Test2"] = df["Test2"].fillna(0).astype(int)
+    print(f"\nMissing after:\n{df.isna().sum()}")
+    
+    # Transform the data
+    # add a derived column ( just as an example of transformed data )
+    df["Total"] = df["Test1"] + df["Test2"]
+
+    print(df["Total"])
+    print(f"\nMissing after transformation:\n{df.isna().sum()}")
+
+    # Create a sneak peek of the cleaned data
+    # NOTE: Our derived column is now included in the in memory copy of the transformed dataframe
+    print(f"\nPreview:\n{df.head()}")
+    print(f"\nSummary statistics (float):\n{df.describe()}")
+    print(f"\nSummary statistics (int):\n{df.describe().astype(int)}")
+
+    # Save the cleaned and transformed data for future use
+    print(f"Saving result to:\n{DATA_DIR}/clean_test_results.csv")
+    df.to_csv(f"{DATA_DIR}/clean_test_results.csv", index=False)
+
+def simple_exampel():
     df = pd.read_csv(f"{DATA_DIR}/students.csv")
     print(df)
 
@@ -29,8 +62,8 @@ def run():
     print(df["Score"])
     print(df.isna().sum())
 
-    df.to_csv(f"{DATA_DIR}/clean_data.csv", index=False)
-
+    # Save the cleaned and transformed data for future use
+    df.to_csv(f"{DATA_DIR}/clean_data.csv", index=False)        
 
 if __name__ == "__main__":
     run()

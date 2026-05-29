@@ -32,7 +32,7 @@ fig, ax = plt.subplots(figsize=(7,4))
 ax.plot(x_values, y_values, marker="o")
 ax.set_title("Cups sold per day")
 ax.set_xlabel("Day")
-ax.set_xlabel("Number of cups")
+ax.set_ylabel("Number of cups")
 
 # create the fig ( picture )
 fig.tight_layout()

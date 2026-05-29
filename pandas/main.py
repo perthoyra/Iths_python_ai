@@ -1,14 +1,11 @@
 from pathlib import Path
 import pandas as pd
 
-def set_globals():
-
-    globals()["BASE_DIR"] = Path(__file__).resolve().parent
-    globals()["DATA_DIR"] = BASE_DIR / "data"
-    globals()["OUTPUTS_DIR"] = BASE_DIR / "outputs"
-    globals()["MODELS_DIR"] = BASE_DIR / "models"
-
-
+# globals()["DATA_DIR"] = BASE_DIR / "data"
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+OUTPUTS_DIR = BASE_DIR / "outputs"
+MODELS_DIR = BASE_DIR / "models"
 
 def more_complex():
     df = pd.read_csv(f"{DATA_DIR}/test_results.csv")
@@ -72,5 +69,4 @@ def run():
     more_complex()
 
 if __name__ == "__main__":
-    set_globals()
     run()

@@ -3,7 +3,8 @@
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).cwdd()
+## BASE_DIR = Path(__file__).resolve().parent <- Does not work with jupytr notebooks
 DATA_DIR = BASE_DIR / "data"
 OUTPUTS_DIR = BASE_DIR / "outputs"
 MODELS_DIR = BASE_DIR / "models"

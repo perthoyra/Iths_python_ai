@@ -62,8 +62,6 @@ plt.close(fig)
 
 # %%
 
-
-
 fig, axes = plt.subplots(1, 2, figsize=(10,4))
 
 axes[0].plot(x_values, y_values, marker="o")
